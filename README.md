@@ -1,4 +1,4 @@
-px-flag-design-
+px-flag-design
 ===============
 
 The flag object for Predix Experience
