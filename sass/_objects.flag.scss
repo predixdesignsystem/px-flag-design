@@ -1,41 +1,37 @@
 /*------------------------------------*\
-    #FLAG
+    #PX-FLAG-DESIGN
 \*------------------------------------*/
 
 @import 'inuit-defaults/settings.defaults';
 @import 'px-functions-design/sass/tools.functions';
 
-@if import-once('objects.flag') {
+/**
+ * The flag object is a design pattern similar to the media object, however it
+ * utilises `display: table[-cell];` to give us control over the vertical
+ * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+ */
 
-  /**
-   * The flag object is a design pattern similar to the media object, however it
-   * utilises `display: table[-cell];` to give us control over the vertical
-   * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
-   */
-  
-  // Predefine the variables below in order to alter and enable specific features.
-  $inuit-flag-namespace:          $inuit-namespace !default;
-  
-  $inuit-flag-gutter:             $inuit-base-spacing-unit !default;
-  $inuit-flag-gutter--tiny:         quarter($inuit-flag-gutter) !default;
-  $inuit-flag-gutter--small:          halve($inuit-flag-gutter) !default;
-  $inuit-flag-gutter--large:         double($inuit-flag-gutter) !default;
-  $inuit-flag-gutter--huge:       quadruple($inuit-flag-gutter) !default;
-  
-  $inuit-enable-flag--tiny:       false !default;
-  $inuit-enable-flag--small:      false !default;
-  $inuit-enable-flag--large:      false !default;
-  $inuit-enable-flag--huge:       false !default;
-  $inuit-enable-flag--rev:        false !default;
-  $inuit-enable-flag--flush:      false !default;
-  $inuit-enable-flag--top:        false !default;
-  $inuit-enable-flag--bottom:     false !default;
-  $inuit-enable-flag--responsive: false !default;
-  $inuit-flag-collapse-at:        720px !default;
-  
-  
-  
-  
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-flag-namespace           : $inuit-namespace !default;
+
+$inuit-flag-gutter              : $inuit-base-spacing-unit !default;
+$inuit-flag-gutter--tiny        : quarter($inuit-flag-gutter) !default;
+$inuit-flag-gutter--small       : halve($inuit-flag-gutter) !default;
+$inuit-flag-gutter--large       : double($inuit-flag-gutter) !default;
+$inuit-flag-gutter--huge        : quadruple($inuit-flag-gutter) !default;
+
+$inuit-enable-flag--tiny        : false !default;
+$inuit-enable-flag--small       : false !default;
+$inuit-enable-flag--large       : false !default;
+$inuit-enable-flag--huge        : false !default;
+$inuit-enable-flag--rev         : false !default;
+$inuit-enable-flag--flush       : false !default;
+$inuit-enable-flag--top         : false !default;
+$inuit-enable-flag--bottom      : false !default;
+$inuit-enable-flag--responsive  : false !default;
+$inuit-flag-collapse-at         : 720px !default;
+
+@if import-once('objects.flag') {
   
   /**
    * 1. Allows us to control vertical alignments
