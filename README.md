@@ -51,7 +51,7 @@ Flag images have a space between them and the body of the object, the distance d
     $inuit-flag-gutter--large
     $inuit-flag-gutter--huge
 
-Basic usage of the Media object uses the required classes:
+Basic usage of the Flag module uses the required classes:
 
     <div class="flag">
         <img src="/path/to/image.png" alt="Alternative text" class="flag__img" />
