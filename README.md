@@ -7,19 +7,19 @@ The Predix Experience Flag module is similar in appearance to the classic OOCSS'
 Px's Flag module depends on two other Px and inuitcss modules:
 
 * [settings.defaults](https://github.com/inuitcss/settings.defaults)
-* [px-functions-design](https://github.sw.ge.com/pxc/px-functions-design)
+* [px-functions-design](https://github.sw.ge.com/PXd/px-functions-design)
 
 ## Installation
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.sw.ge.com/pxc/px-flag-design.git
+    bower install --save https://github.sw.ge.com/PXd/px-flag-design.git
 
 Once installed, `@import` into your project's Sass file in its Objects layer:
 
     @import "../px-flag-design/objects.flag";
 
-See [px-getting-started](https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
+See [px-getting-started](https://github.sw.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
 
 ## Import once
 
