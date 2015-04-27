@@ -14,12 +14,6 @@
 // Predefine the variables below in order to alter and enable specific features.
 $inuit-flag-namespace           : $inuit-namespace !default;
 
-$inuit-flag-gutter              : $inuit-base-spacing-unit !default;
-$inuit-flag-gutter--tiny        : quarter($inuit-flag-gutter) !default;
-$inuit-flag-gutter--small       : halve($inuit-flag-gutter) !default;
-$inuit-flag-gutter--large       : double($inuit-flag-gutter) !default;
-$inuit-flag-gutter--huge        : quadruple($inuit-flag-gutter) !default;
-
 $inuit-enable-flag--tiny        : false !default;
 $inuit-enable-flag--small       : false !default;
 $inuit-enable-flag--large       : false !default;
@@ -62,7 +56,7 @@ $inuit-flag-collapse-at         : 720px !default;
        */
       .#{$inuit-flag-namespace}flag__img,
       %#{$inuit-flag-namespace}flag__img {
-          padding-right: $inuit-flag-gutter;
+          padding-right: $inuit-base-spacing-unit;
   
           > img {
               display: block;
@@ -102,7 +96,7 @@ $inuit-flag-collapse-at         : 720px !default;
   
           > .#{$inuit-flag-namespace}flag__img,
           > %#{$inuit-flag-namespace}flag__img {
-              padding-right: $inuit-flag-gutter--tiny;
+              padding-right: $inuit-base-spacing-unit--tiny;
           }
   
           @if ($inuit-enable-flag--rev == true) {
@@ -117,7 +111,7 @@ $inuit-flag-collapse-at         : 720px !default;
                   > .#{$inuit-flag-namespace}flag__img,
                   > %#{$inuit-flag-namespace}flag__img {
                       padding-right: 0;
-                      padding-left:  $inuit-flag-gutter--tiny;
+                      padding-left:  $inuit-base-spacing-unit--tiny;
                   }
   
               }
@@ -139,7 +133,7 @@ $inuit-flag-collapse-at         : 720px !default;
   
           > .#{$inuit-flag-namespace}flag__img,
           > %#{$inuit-flag-namespace}flag__img {
-              padding-right: $inuit-flag-gutter--small;
+              padding-right: $inuit-base-spacing-unit--small;
           }
   
           @if ($inuit-enable-flag--rev == true) {
@@ -154,7 +148,7 @@ $inuit-flag-collapse-at         : 720px !default;
                   > .#{$inuit-flag-namespace}flag__img,
                   > %#{$inuit-flag-namespace}flag__img {
                       padding-right: 0;
-                      padding-left:  $inuit-flag-gutter--small;
+                      padding-left:  $inuit-base-spacing-unit--small;
                   }
   
               }
@@ -176,7 +170,7 @@ $inuit-flag-collapse-at         : 720px !default;
   
           > .#{$inuit-flag-namespace}flag__img,
           > %#{$inuit-flag-namespace}flag__img {
-              padding-right: $inuit-flag-gutter--large;
+              padding-right: $inuit-base-spacing-unit--large;
           }
   
           @if ($inuit-enable-flag--rev == true) {
@@ -191,7 +185,7 @@ $inuit-flag-collapse-at         : 720px !default;
                   > .#{$inuit-flag-namespace}flag__img,
                   > %#{$inuit-flag-namespace}flag__img {
                       padding-right: 0;
-                      padding-left:  $inuit-flag-gutter--large;
+                      padding-left:  $inuit-base-spacing-unit--large;
                   }
   
               }
@@ -213,7 +207,7 @@ $inuit-flag-collapse-at         : 720px !default;
   
           > .#{$inuit-flag-namespace}flag__img,
           > %#{$inuit-flag-namespace}flag__img {
-              padding-right: $inuit-flag-gutter--huge;
+              padding-right: $inuit-base-spacing-unit--huge;
           }
   
           @if ($inuit-enable-flag--rev == true) {
@@ -228,7 +222,7 @@ $inuit-flag-collapse-at         : 720px !default;
                   > .#{$inuit-flag-namespace}flag__img,
                   > %#{$inuit-flag-namespace}flag__img {
                       padding-right: 0;
-                      padding-left:  $inuit-flag-gutter--huge;
+                      padding-left:  $inuit-base-spacing-unit--huge;
                   }
   
               }
@@ -268,7 +262,7 @@ $inuit-flag-collapse-at         : 720px !default;
           > .#{$inuit-flag-namespace}flag__img,
           > %#{$inuit-flag-namespace}flag__img {
               padding-right: 0; /* [3] */
-              padding-left: $inuit-flag-gutter; /* [3] */
+              padding-left: $inuit-base-spacing-unit; /* [3] */
           }
   
       }
@@ -389,7 +383,7 @@ $inuit-flag-collapse-at         : 720px !default;
               > %#{$inuit-flag-namespace}flag__img {
                   padding-right: 0;
                   padding-left:  0;
-                  margin-bottom: $inuit-flag-gutter;
+                  margin-bottom: $inuit-base-spacing-unit;
               }
   
               @if ($inuit-enable-flag--tiny == true) {
@@ -409,7 +403,7 @@ $inuit-flag-collapse-at         : 720px !default;
                       > %#{$inuit-flag-namespace}flag__img {
                           padding-right: 0;
                           padding-left:  0;
-                          margin-bottom: $inuit-flag-gutter--tiny;
+                          margin-bottom: $inuit-base-spacing-unit--tiny;
                       }
   
                   }
@@ -433,7 +427,7 @@ $inuit-flag-collapse-at         : 720px !default;
                       > %#{$inuit-flag-namespace}flag__img {
                           padding-right: 0;
                           padding-left:  0;
-                          margin-bottom: $inuit-flag-gutter--small;
+                          margin-bottom: $inuit-base-spacing-unit--small;
                       }
   
                   }
@@ -457,7 +451,7 @@ $inuit-flag-collapse-at         : 720px !default;
                       > %#{$inuit-flag-namespace}flag__img {
                           padding-right: 0;
                           padding-left:  0;
-                          margin-bottom: $inuit-flag-gutter--large;
+                          margin-bottom: $inuit-base-spacing-unit--large;
                       }
   
                   }
@@ -481,7 +475,7 @@ $inuit-flag-collapse-at         : 720px !default;
                       > %#{$inuit-flag-namespace}flag__img {
                           padding-right: 0;
                           padding-left:  0;
-                          margin-bottom: $inuit-flag-gutter--huge;
+                          margin-bottom: $inuit-base-spacing-unit--huge;
                       }
   
                   }
