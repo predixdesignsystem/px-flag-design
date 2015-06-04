@@ -1,29 +1,43 @@
-/*------------------------------------*\
-    #PX-FLAG-DESIGN
-\*------------------------------------*/
+////
+/// PX-FLAG-DESIGN
+/// The flag object is a design pattern similar to the media object, however it utilises `display: table[-cell];` to give us control over the vertical alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+/// @group px-flag-design
+////
 
 @import '../px-defaults-design/settings.defaults';
-@import '../px-functions-design/tools.functions';
 
-/**
- * The flag object is a design pattern similar to the media object, however it
- * utilises `display: table[-cell];` to give us control over the vertical
- * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
- */
-
-// Predefine the variables below in order to alter and enable specific features.
+/// @type String [default] - Prepend value for all generated classes
 $inuit-flag-namespace           : $inuit-namespace !default;
 
+/// @type Boolean [default] - Produce CSS for flags with tiny gutters?
 $inuit-enable-flag--tiny        : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with small gutters?
 $inuit-enable-flag--small       : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with large gutters?
 $inuit-enable-flag--large       : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with huge gutters?
 $inuit-enable-flag--huge        : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with reversed content (i.e. image on right)?
 $inuit-enable-flag--rev         : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with no gutters?
 $inuit-enable-flag--flush       : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with top aligned content?
 $inuit-enable-flag--top         : false !default;
+
+/// @type Boolean [default] - Produce CSS for flags with bottom aligned content?
 $inuit-enable-flag--bottom      : false !default;
+
+/// @type Boolean [default] - Produce CSS for responsive flags?
 $inuit-enable-flag--responsive  : false !default;
-$inuit-flag-collapse-at         : 720px !default;
+
+/// @type Number [default] - Breakpoint for triggering repsonsive flags
+$inuit-flag-collapse-at         : calculateRem(720px) !default;
 
 @if import-once('objects.flag') {
   
