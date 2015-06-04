@@ -2,24 +2,31 @@
 
 The Predix Experience Flag module is similar in appearance to the classic OOCSS' [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), however it utilises `display: table[-cell];` to give us control over the vertical alignments of the text and image (http://csswizardry.com/2013/05/the-flag-object). This module is a fork of the [inuitcss Flag module](https://github.com/inuitcss/objects.flag).
 
-## Dependencies
+## Demo
 
-Px's Flag module depends on two other Px and inuitcss modules:
+You can review button styles and recommended markup and required here: https://github.build.ge.com/pages/PXd/px-flag-design
 
-* [settings.defaults](https://github.com/inuitcss/settings.defaults)
-* [px-functions-design](https://github.sw.ge.com/PXd/px-functions-design)
+## Sass Documentation
+
+You can review Sass Documentation here: https://github.build.ge.com/pages/PXd/px-flag-design/sassdoc
+
+## Dependency
+
+Px's Flag module depends on one other Px module:
+
+* [px-defaults-design](https://github.build.ge.com/PXd/px-defaults-design)
 
 ## Installation
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.sw.ge.com/PXd/px-flag-design.git
+    bower install --save https://github.build.ge.com/PXd/px-flag-design.git
 
 Once installed, `@import` into your project's Sass file in its Objects layer:
 
     @import "../px-flag-design/objects.flag";
 
-See [px-getting-started](https://github.sw.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
+See [px-getting-started](https://github.build.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
 
 ## Import once
 
@@ -55,12 +62,12 @@ Flag images have a space between them and the body of the object, the distance d
 
 Basic usage of the Flag module uses the required classes:
 
-    <div class="flag">
-        <img src="/path/to/image.png" alt="Alternative text" class="flag__img" />
-        <div class="flag__body">
-            <p>Text-like content goes here.</p>
-        </div>
-    </div>
+    <figure class=flag>
+        <img src=... alt=... class=flag__img>
+        <figcaption class=flag__body>
+            ...
+        </figcaption>
+    </figure>
 
 The only valid children of the `.flag` node are `.flag__img` and`.flag__body`.
 
@@ -77,9 +84,9 @@ Other, optional classes can supplement the required base classes:
 
 For example:
 
-    <div class="flag flag--flush flag--rev">
-        <img src="/path/to/image.png" alt="Alternative text" class="flag__img" />
-        <div class="flag__body">
-            <p>Text-like content goes here.</p>
-        </div>
-    </div>
+    <figure class="flag flag--flush flag--rev">
+        <img src=... alt=... class=flag__img>
+        <figcaption class=flag__body>
+            ...
+        </figcaption>
+    </figure>
