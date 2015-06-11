@@ -18,7 +18,7 @@ Px's Flag module depends on one other Px module:
 
 ## Installation
 
-Install this module and its dependencies using bower:
+Install this module and its dependency using bower:
 
     bower install --save https://github.build.ge.com/PXd/px-flag-design.git
 
@@ -51,14 +51,6 @@ These flags are available and, if needed, should be set to `true` prior to impor
 The following variables are available for use in the module:
 
     $inuit-flag-collapse-at
-
-Flag images have a space between them and the body of the object, the distance defined by these variables:
-
-    $inuit-flag-gutter
-    $inuit-flag-gutter--tiny
-    $inuit-flag-gutter--small
-    $inuit-flag-gutter--large
-    $inuit-flag-gutter--huge
 
 Basic usage of the Flag module uses the required classes:
 
