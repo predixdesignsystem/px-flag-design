@@ -1,13 +1,11 @@
-$imported-once-files            : ();
-
 // Generic
-@import "../px-normalize-design/generic.normalize";
-@import "../px-box-sizing-design/generic.box-sizing";
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
 
 // Base
-@import "../px-viewport-design/base.viewport";
-@import "../px-typography-design/base.typography";
-@import "../px-code-design/base.code";
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-typography-design/_base.typography.scss";
+@import "px-code-design/_base.code.scss";
 
 // Flag
 $inuit-enable-flag--tiny        : true;
@@ -20,10 +18,10 @@ $inuit-enable-flag--top         : true;
 $inuit-enable-flag--bottom      : true;
 $inuit-enable-flag--responsive  : true;
 
-@import "../objects.flag";
+@import "../_objects.flag.scss";
 
 // Trumps
 $inuit-enable-margins--large    : true;
 $inuit-enable-margins--huge     : true;
 
-@import "../px-spacing-responsive-design/trumps.spacing-responsive";
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
