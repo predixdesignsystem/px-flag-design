@@ -1,6 +1,6 @@
 {
   "name": "px-flag-design",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "The flag object for Predix Experience",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.build.ge.com/PXd/px-flag-design.git"
+    "url": "https://github.build.ge.com/PXd/px-flag-design.git"
   },
   "author": "General Electric",
   "license": "Apache 2",
