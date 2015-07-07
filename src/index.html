@@ -14,13 +14,43 @@
         <p>
           To use this module, follow the instructions in the
           <a href=https://github.build.ge.com/PXd/px-flag-design>README</a>.
+          <!-- build:remove -->
+          (For background on PXd, read the
+          <a href=https://github.build.ge.com/PXd/px-getting-started>Getting Started</a>
+          documentation.)
+          <!-- /build -->
         </p>
-        <a class=btn href=https://github.build.ge.com/PXd/px-flag-design>
+        <a class="btn btn--primary" href=https://github.build.ge.com/PXd/px-flag-design>
           <i class="fa fa-github u-mr--"></i>
           px-flag-design
         </a>
       </div>
+      <h2>How to Use</h2>
+      <p>Install via command line:</p>
+      <figure class="code u-mb+">
+        <code>
+          bower install --save https://github.build.ge.com/PXd/px-flag-design.git
+        </code>
+      </figure>
+      <p>Add to component Sass file:</p>
+      <figure class="code u-mb++">
+        <code>
+          @import "px-flag-design/_objects.flag.scss";
+        </code>
+      </figure>
       <h2>Flag with tiny gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--tiny : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--tiny"&gt;
@@ -49,6 +79,18 @@
         </figcaption>
       </figure>
       <h2>Flag with small gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--small : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--small"&gt;
@@ -105,6 +147,18 @@
         </figcaption>
       </figure>
       <h2>Flag with large gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--large : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--large"&gt;
@@ -133,6 +187,18 @@
         </figcaption>
       </figure>
       <h2>Flag with huge gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--huge : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--huge"&gt;
@@ -161,6 +227,18 @@
         </figcaption>
       </figure>
       <h2>Flag with no gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--flush : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--flush"&gt;
@@ -189,6 +267,18 @@
         </figcaption>
       </figure>
       <h2>Flag with top aligned content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--top : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--top"&gt;
@@ -217,6 +307,18 @@
         </figcaption>
       </figure>
       <h2>Flag with bottom aligned content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--bottom : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--bottom"&gt;
@@ -245,6 +347,18 @@
         </figcaption>
       </figure>
       <h2>Flag with reversed content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--rev : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--rev"&gt;
@@ -272,7 +386,19 @@
           <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </figcaption>
       </figure>
-      <h2>Flag with respsonsive content</h2>
+      <h2>Flag with responsive content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--responsive : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;figure class="flag flag--responsive"&gt;
