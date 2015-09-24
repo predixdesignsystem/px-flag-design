@@ -2,13 +2,10 @@
 
 The Predix Experience Flag module is similar in appearance to the classic OOCSS' [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), however it utilises `display: table[-cell];` to give us control over the vertical alignments of the text and image (http://csswizardry.com/2013/05/the-flag-object). This module is a fork of the [inuitcss Flag module](https://github.com/inuitcss/objects.flag).
 
-## Demo
 
-You can review button styles and recommended markup and required here: https://github.com/pages/PredixDev/px-flag-design
 
-## Sass Documentation
 
-You can review Sass Documentation here: https://github.com/pages/PredixDev/px-flag-design/sassdoc
+
 
 ## Dependency
 
