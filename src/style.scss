@@ -1,0 +1,39 @@
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+
+// Base
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-typography-design/_base.typography.scss";
+
+$inuit-enable-code--inline      : true;
+
+@import "px-code-design/_base.code.scss";
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-iconography-design/_base.iconography.scss";
+
+// Objects
+$inuit-enable-btn--primary      : true;
+
+@import 'px-buttons-design/_objects.buttons.scss';
+
+// Flag
+$inuit-enable-flag--tiny        : true;
+$inuit-enable-flag--small       : true;
+$inuit-enable-flag--large       : true;
+$inuit-enable-flag--huge        : true;
+$inuit-enable-flag--rev         : true;
+$inuit-enable-flag--flush       : true;
+$inuit-enable-flag--top         : true;
+$inuit-enable-flag--bottom      : true;
+$inuit-enable-flag--responsive  : true;
+
+@import "../_objects.flag.scss";
+
+// Trumps
+$inuit-enable-margins--tiny     : true;
+$inuit-enable-margins--large    : true;
+$inuit-enable-margins--huge     : true;
+$inuit-enable-margins--none     : true;
+
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";

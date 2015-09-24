@@ -1,0 +1,433 @@
+<!-- build:remove -->
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <title>Flag</title>
+    <link rel=stylesheet href=css/style.css>
+  </head>
+  <body>
+    <section class=viewport role=region>
+      <!-- /build -->
+      <h1>Flag</h1>
+      <div class="flex flex--justify flex--wrap flex--baseline">
+        <p>
+          To use this module, follow the instructions in the
+          <a href=https://github.com/PredixDev/px-flag-design>README</a>.
+          <!-- build:remove -->
+          (For background on PXd, read the
+          <a href=https://github.com/PredixDev/px-getting-started>Getting Started</a>
+          documentation.)
+          <!-- /build -->
+        </p>
+        <a class="btn btn--primary" href=https://github.com/PredixDev/px-flag-design>
+          <i class="fa fa-github u-mr--"></i>
+          px-flag-design
+        </a>
+      </div>
+      <h2>How to Use</h2>
+      <p>Install via command line:</p>
+      <figure class="code u-mb+">
+        <code>
+          bower install --save https://github.com/PredixDev/px-flag-design.git
+        </code>
+      </figure>
+      <p>Add to component Sass file:</p>
+      <figure class="code u-mb++">
+        <code>
+          @import "px-flag-design/_objects.flag.scss";
+        </code>
+      </figure>
+      <h2>Flag with tiny gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--tiny : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--tiny"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--tiny u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with small gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--small : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--small"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--small u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with regular gutters</h2>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class=flag&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with large gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--large : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--large"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--large u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with huge gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--huge : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--huge"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--huge u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with no gutters</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--flush : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--flush"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--flush u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with top aligned content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--top : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--top"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--top u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with bottom aligned content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--bottom : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--bottom"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--bottom u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with reversed content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--rev : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--rev"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--rev u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+      <h2>Flag with responsive content</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-flag--responsive : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
+      <figure class="code u-mb+">
+        <code>
+          &lt;figure class="flag flag--responsive"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;div class=flag__img&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&hellip; alt=&hellip;&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/div&gt;
+          <br>
+          &nbsp;&nbsp;&lt;figcaption class=flag__body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+          <br>
+          &nbsp;&nbsp;&lt;/figcaption&gt;
+          <br>
+          &lt;/figure&gt;
+        </code>
+      </figure>
+      <figure class="flag flag--responsive u-mb++">
+        <div class=flag__img>
+          <img src=http://placehold.it/150x150 alt=Placeholder>
+        </div>
+        <figcaption class=flag__body>
+          <p class=u-mt0>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </figcaption>
+      </figure>
+    <!-- build:remove -->
+    </section>
+  </body>
+</html>
+<!-- /build -->
