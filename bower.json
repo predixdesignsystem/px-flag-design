@@ -1,6 +1,6 @@
 {
   "name": "px-flag-design",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -14,7 +14,7 @@
   ],
   "license": "Apache 2",
   "homepage": "https://github.com/PredixDev/px-flag-design.git",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
