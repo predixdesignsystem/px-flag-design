@@ -1,15 +1,10 @@
 # Flag
 
-The Predix Experience Flag module is similar in appearance to the classic OOCSS' [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), however it utilises `display: table[-cell];` to give us control over the vertical alignments of the text and image (http://csswizardry.com/2013/05/the-flag-object). This module is a fork of the [inuitcss Flag module](https://github.com/inuitcss/objects.flag).
-
-
-
-
-
+The Predix UI Flag module is similar in appearance to the classic OOCSS' [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), however it utilises `display: table[-cell];` to give us control over the vertical alignments of the text and image (http://csswizardry.com/2013/05/the-flag-object). This module is a fork of the [inuitcss Flag module](https://github.com/inuitcss/objects.flag).
 
 ## Dependency
 
-Px's Flag module depends on one other Px module:
+Predix UI's Flag module depends on one other Px module:
 
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
 
@@ -17,7 +12,7 @@ Px's Flag module depends on one other Px module:
 
 Install this module and its dependency using bower:
 
-    bower install --save https://github.com/PredixDev/px-flag-design.git
+    bower install --save px-flag-design
 
 Once installed, `@import` into your project's Sass file in its Objects layer:
 
@@ -71,3 +66,5 @@ For example:
             ...
         </figcaption>
     </figure>
+
+view the full API [here](http://predixdev.github.io/px-flag-design/)
