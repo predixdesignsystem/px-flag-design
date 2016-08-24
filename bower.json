@@ -12,7 +12,6 @@
     "sass",
     "flag"
   ],
-  "license": "Apache 2",
   "homepage": "https://github.com/PredixDev/px-flag-design.git",
   "private": false,
   "ignore": [
