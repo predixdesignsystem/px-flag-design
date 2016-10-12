@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>px-flag-design Demo</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Boilerplate: Import Libraries -->
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../px-theme/px-theme-styles.html" />
+  <style include="px-theme-styles" is="custom-style"></style>
+  <link rel="import" href="../px-sass-doc/px-sass-doc.html" />
+  <link rel="import" href="../px-polymer-font-awesome/polymer-font-awesome.html" />
+
+  <!-- 0: Import Module Styles -->
+  <link rel="stylesheet" type="text/css" href="css/px-flag-design-demo.css" />
+</head>
+<body>
+<template id="just-for-demo" is="dom-bind">
+
+<!-- 1: Describe Module -->
+<px-sass-doc
+  module-name="px-flag-design"
+  description="The Predix UI Flag module is similar in appearance to the classic OOCSS' media object, however it utilizes 'display: table-cell' to give us control over the vertical alignments of the text and image."
+  layer="objects"
+  sassdoc-path="sassdoc.json"
+  dependencies='[
+    "https://github.com/PredixDev/px-defaults-design"
+  ]'
+  selected-options="{{selectedOptions}}">
+
+<!-- 2: Set Options -->
+<px-sass-doc-option
+  option-name="Padding"
+  choose-with="dropdown"
+  choices='[
+    "flush",
+    "tiny",
+    "small",
+    "regular (default)",
+    "large",
+    "huge"
+  ]'
+  default-choice="regular (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Alignment"
+  choose-with="dropdown"
+  choices='[
+    "top",
+    "middle (default)",
+    "bottom"
+  ]'
+  default-choice="middle (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Reverse"
+  choose-with="boolean">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Responsive"
+  choose-with="boolean">
+</px-sass-doc-option>
+
+<!-- 3: Make HTML Demo -->
+<section data-slot="demoHTML">
+<figure class$={{flagClasses}}>
+  <div class="flag__img">
+    <img src="http://placehold.it/50x50" />
+  </div>
+  <figcaption class=flag__body>Caption</figcaption>
+</figure>
+</section>
+
+<!-- 4: Set Import Slot -->
+<section data-slot="import">
+{{importCode}}
+</section>
+
+<!-- 5: Set Usage HTML -->
+<section data-slot="usage">
+Example:
+```
+<figure class="flag flag--large">
+  <div class="flag__img">
+    <img src="http://placehold.it/50x50" />
+  </div>
+  <figcaption class=flag__body>Caption</figcaption>
+</figure>
+```
+</section>
+
+</px-sass-doc>
+</template>
+
+<!-- 6: Handle selectedOptions, update demo -->
+<script>
+  var template = document.querySelector('template[is=dom-bind]');
+
+  document.addEventListener('px-sass-doc-options-updated', function(evt) {
+    template.importCode = template._importCode();
+    template.flagClasses = template._flagClasses();
+  });
+
+  template._flagClasses = function() {
+    var opts = template.selectedOptions || {}, strings = [];
+    if (opts.Padding === "flush")         strings.push("flag--flush");
+    if (opts.Padding === "tiny")          strings.push("flag--tiny");
+    if (opts.Padding === "small")         strings.push("flag--small");
+    if (opts.Padding === "large")         strings.push("flag--large");
+    if (opts.Padding === "huge")          strings.push("flag--huge");
+    if (opts.Alignment === "top")         strings.push("flag--top");
+    if (opts.Alignment === "bottom")      strings.push("flag--bottom");
+    if (opts.Reverse === true)            strings.push("flag--rev");
+    if (opts.Responsive === true)         strings.push("flag--responsive");
+    return ("flag " + strings.join(" ")).trim();
+  };
+
+  template._importCode = function() {
+    var opts = template.selectedOptions || {}, strings = [];
+    if (opts.Padding === "flush")          strings.push("$inuit-enable-flag--flush : true;");
+    if (opts.Padding === "tiny")           strings.push("$inuit-enable-flag--tiny : true;");
+    if (opts.Padding === "small")          strings.push("$inuit-enable-flag--small : true;");
+    if (opts.Padding === "large")          strings.push("$inuit-enable-flag--large : true;");
+    if (opts.Padding === "huge")           strings.push("$inuit-enable-flag--huge : true;");
+    if (opts.Alignment === "top")          strings.push("$inuit-enable-flag--top : true;");
+    if (opts.Alignment === "bottom")       strings.push("$inuit-enable-flag--bottom : true;");
+    if (opts.Reverse === true)             strings.push("$inuit-enable-flag--rev : true;");
+    if (opts.Responsive === true)          strings.push("$inuit-enable-flag--responsive : true;");
+    return (strings.join("\n") + "\n@import 'px-flag-design/_objects.flag.scss';").trim();
+  };
+</script>
+
+</body>
+</html>
