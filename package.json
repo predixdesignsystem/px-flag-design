@@ -1,6 +1,6 @@
 {
   "name": "px-flag-design",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "description": "The flag object for Predix UI",
   "private": false,
   "scripts": {
