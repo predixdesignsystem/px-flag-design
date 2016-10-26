@@ -85,12 +85,65 @@
 <section data-slot="usage">
 Example:
 ```
-<figure class="flag flag--large">
-  <div class="flag__img">
-    <img src="http://placehold.it/50x50" />
-  </div>
-  <figcaption class=flag__body>Caption</figcaption>
-</figure>
+<!-- Flag -->
+<!-- 1. Allows us to control vertical alignments -->
+<!-- 2. Force the object to be the full width of its parent. Combined with [1], this makes the object behave in a quasi-`display: block;` manner. -->
+<figure class="flag">...</figure>
+
+
+<!-- Flag Img -->
+<!-- Flag images have a space between them and the body of the object. -->
+<!-- There should only ever be one of each. -->
+<div class="flag__img">...</div>
+
+
+<!-- Flag Body -->
+<!-- The container for the main content of the flag object. -->
+<!-- There should only ever be one of each. -->
+<figcaption class="flag__body">...</figcaption>
+
+
+<!-- Flag Flush -->
+<!-- Flush flag objects have no space between the image- and text-content. -->
+<figure class="flag flag--flush">...</figure>
+
+
+<!-- Flag Tiny -->
+<figure class="flag flag--tiny">...</figure>
+
+
+<!-- Flag Small -->
+<figure class="flag flag--small">...</figure>
+
+
+<!-- Flag Large -->
+<figure class="flag flag--large">...</figure>
+
+
+<!-- Flag Huge -->
+<figure class="flag flag--huge">...</figure>
+
+
+<!-- Flag Reversed -->
+<!-- Reversed flag objects have their image-content to the right, and text-content to the left. -->
+<figure class="flag flag--rev">...</figure>
+
+
+<!-- Flag Top -->
+<!-- Vertically top aligned flag objects. -->
+<figure class="flag flag--top">...</figure>
+
+
+<!-- Flag Bottom -->
+<!-- Vertically bottom aligned flag objects. -->
+<figure class="flag flag--bottom">...</figure>
+
+
+<!-- Flag Responsive -->
+<!-- We use a `max-width` media query because: -->
+<!-- a) it is the least verbose method in terms of amount of code required. -->
+<!-- b) the flag object’s default state is image-next-to-text, so its stacked state is the exception, rather than the rule. -->
+<figure class="flag flag--bottom">...</figure>
 ```
 </section>
 
