@@ -1,3 +1,8 @@
+
+v0.2.17
+==================
+* patch test
+
 v0.2.16
 ==============================
 * added more detail to use it in your project
