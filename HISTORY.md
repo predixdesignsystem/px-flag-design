@@ -1,3 +1,7 @@
+v1.0.0
+==================
+* update for redesign
+
 v0.3.4
 ==================
 * update demo page using px-demo classes
