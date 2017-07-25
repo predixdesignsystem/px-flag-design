@@ -1,10 +1,9 @@
-# Flag
+# px-flag-design
 
 The Predix UI Flag module is similar in appearance to the classic OOCSS' [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), however it utilises `display: table[-cell];` to give us control over the vertical alignments of the text and image (http://csswizardry.com/2013/05/the-flag-object). This module is a fork of the [inuitcss Flag module](https://github.com/inuitcss/objects.flag).
 
-## Dependency
-
-Predix UI's Flag module depends on one other Px module:
+## Dependencies
+The `px-flag-design` module depends on one other Px module:
 
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
 
@@ -67,4 +66,4 @@ For example:
         </figcaption>
     </figure>
 
-view the full API [here](http://predixdev.github.io/px-flag-design/)
+View the full API [here](http://predixdev.github.io/px-flag-design/).
