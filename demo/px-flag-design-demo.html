@@ -23,7 +23,7 @@
   selected-options="{{selectedOptions}}">
 
 <!-- 2: Set Options -->
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Padding"
   choose-with="dropdown"
   choices='[
@@ -37,7 +37,7 @@
   default-choice="regular (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Alignment"
   choose-with="dropdown"
   choices='[
@@ -48,18 +48,18 @@
   default-choice="middle (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Reverse"
   choose-with="boolean">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Responsive"
   choose-with="boolean">
 </px-sass-doc-option>
 
 <!-- 3: Make HTML Demo -->
-<section data-slot="demoHTML">
+<section slot="demo-html">
 <figure class$="{{flagClasses}}">
   <div class="flag__img">
     <img src="http://placehold.it/50x50" />
@@ -69,12 +69,12 @@
 </section>
 
 <!-- 4: Set Import Slot -->
-<section data-slot="import">
+<section slot="import">
 {{importCode}}
 </section>
 
 <!-- 5: Set Usage HTML -->
-<section data-slot="usage">
+<section slot="usage">
 Example:
 ```
 <!-- Flag -->
