@@ -1,0 +1,196 @@
+/*
+Copyright (c) 2018, General Electric
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+/* Common imports */
+/* Common demo imports */
+/* Demo DOM module */
+/* 6: Handle selectedOptions, update demo */
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+import '@polymer/polymer/polymer-legacy.js';
+
+import 'px-sass-doc/px-sass-doc.js';
+import '../css/px-flag-design-demo-styles.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+Polymer({
+  _template: html`
+  <!-- 0: Import the styles-->
+  <style include="px-flag-design-demo-styles" is="custom-style"></style>
+
+<!-- 1: Describe Module -->
+<px-sass-doc module-name="px-flag-design" description="The Predix UI Flag module is similar in appearance to the classic OOCSS' media object, however it utilizes 'display: table-cell' to give us control over the vertical alignments of the text and image." layer="objects" sassdoc-path="sassdoc.json" dependencies="[
+    &quot;https://github.com/PredixDev/px-defaults-design&quot;
+  ]" selected-options="{{selectedOptions}}">
+
+<!-- 2: Set Options -->
+<px-sass-doc-option slot="options" option-name="Padding" choose-with="dropdown" choices="[
+    &quot;flush&quot;,
+    &quot;tiny&quot;,
+    &quot;small&quot;,
+    &quot;regular (default)&quot;,
+    &quot;large&quot;,
+    &quot;huge&quot;
+  ]" default-choice="regular (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option slot="options" option-name="Alignment" choose-with="dropdown" choices="[
+    &quot;top&quot;,
+    &quot;middle (default)&quot;,
+    &quot;bottom&quot;
+  ]" default-choice="middle (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option slot="options" option-name="Reverse" choose-with="boolean">
+</px-sass-doc-option>
+
+<px-sass-doc-option slot="options" option-name="Responsive" choose-with="boolean">
+</px-sass-doc-option>
+
+<!-- 3: Make HTML Demo -->
+<section slot="demo-html">
+<figure class\$="{{flagClasses}}">
+  <div class="flag__img">
+    <img src="http://placehold.it/50x50">
+  </div>
+  <figcaption class="flag__body">Caption</figcaption>
+</figure>
+</section>
+
+<!-- 4: Set Import Slot -->
+<section slot="import">
+{{importCode}}
+</section>
+
+<!-- 5: Set Usage HTML -->
+<section slot="usage">
+Example:
+\`\`\`
+<!-- Flag -->
+<!-- 1. Allows us to control vertical alignments -->
+<!-- 2. Force the object to be the full width of its parent. Combined with [1], this makes the object behave in a quasi-\`display: block;\` manner. -->
+<figure class="flag">...</figure>
+
+
+<!-- Flag Img -->
+<!-- Flag images have a space between them and the body of the object. -->
+<!-- There should only ever be one of each. -->
+<div class="flag__img">...</div>
+
+
+<!-- Flag Body -->
+<!-- The container for the main content of the flag object. -->
+<!-- There should only ever be one of each. -->
+<figcaption class="flag__body">...</figcaption>
+
+
+<!-- Flag Flush -->
+<!-- Flush flag objects have no space between the image- and text-content. -->
+<figure class="flag flag--flush">...</figure>
+
+
+<!-- Flag Tiny -->
+<figure class="flag flag--tiny">...</figure>
+
+
+<!-- Flag Small -->
+<figure class="flag flag--small">...</figure>
+
+
+<!-- Flag Large -->
+<figure class="flag flag--large">...</figure>
+
+
+<!-- Flag Huge -->
+<figure class="flag flag--huge">...</figure>
+
+
+<!-- Flag Reversed -->
+<!-- Reversed flag objects have their image-content to the right, and text-content to the left. -->
+<figure class="flag flag--rev">...</figure>
+
+
+<!-- Flag Top -->
+<!-- Vertically top aligned flag objects. -->
+<figure class="flag flag--top">...</figure>
+
+
+<!-- Flag Bottom -->
+<!-- Vertically bottom aligned flag objects. -->
+<figure class="flag flag--bottom">...</figure>
+
+
+<!-- Flag Responsive -->
+<!-- We use a \`max-width\` media query because: -->
+<!-- a) it is the least verbose method in terms of amount of code required. -->
+<!-- b) the flag object’s default state is image-next-to-text, so its stacked state is the exception, rather than the rule. -->
+<figure class="flag flag--bottom">...</figure>
+\`\`\`
+</section>
+
+</px-sass-doc>
+`,
+
+  is: 'px-flag-design-demo',
+
+  attached : function(){
+    var boundHandler = this._handleOptionsUpdated.bind(this);
+    this.addEventListener('px-sass-doc-options-updated', boundHandler)
+  },
+
+  detached : function(){
+    this.removeEventListener('px-sass-doc-options-updated', boundHandler);
+  },
+
+  _handleOptionsUpdated : function(evt) {
+    //call functions created below
+    this.flagClasses = this._flagClasses();
+    this.importCode = this._importCode();
+
+    // Wait, then tell the highlighter to run after dom-if restamps
+    this.async(function(){ this.fire('px-sass-doc-demo-updated', {}) }, 10);
+  },
+
+  _flagClasses : function() {
+    var opts = this.selectedOptions || {}, strings = [];
+    if (opts.Padding === "flush")         strings.push("flag--flush");
+    if (opts.Padding === "tiny")          strings.push("flag--tiny");
+    if (opts.Padding === "small")         strings.push("flag--small");
+    if (opts.Padding === "large")         strings.push("flag--large");
+    if (opts.Padding === "huge")          strings.push("flag--huge");
+    if (opts.Alignment === "top")         strings.push("flag--top");
+    if (opts.Alignment === "bottom")      strings.push("flag--bottom");
+    if (opts.Reverse === true)            strings.push("flag--rev");
+    if (opts.Responsive === true)         strings.push("flag--responsive");
+    return ("flag " + strings.join(" ")).trim();
+  },
+
+  _importCode : function() {
+    var opts = this.selectedOptions || {}, strings = [];
+    if (opts.Padding === "flush")          strings.push("$inuit-enable-flag--flush : true;");
+    if (opts.Padding === "tiny")           strings.push("$inuit-enable-flag--tiny : true;");
+    if (opts.Padding === "small")          strings.push("$inuit-enable-flag--small : true;");
+    if (opts.Padding === "large")          strings.push("$inuit-enable-flag--large : true;");
+    if (opts.Padding === "huge")           strings.push("$inuit-enable-flag--huge : true;");
+    if (opts.Alignment === "top")          strings.push("$inuit-enable-flag--top : true;");
+    if (opts.Alignment === "bottom")       strings.push("$inuit-enable-flag--bottom : true;");
+    if (opts.Reverse === true)             strings.push("$inuit-enable-flag--rev : true;");
+    if (opts.Responsive === true)          strings.push("$inuit-enable-flag--responsive : true;");
+    return (strings.join("\n") + "\n@import 'px-flag-design/_objects.flag.scss';").trim();
+  }
+});
